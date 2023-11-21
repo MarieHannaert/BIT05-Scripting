@@ -41,7 +41,7 @@ str1.split("i")
 print("\nMore string methods:")
 # More string methods
 print(str1.lstrip("bio")) # 'nformatics'
-print(str1.lstrip("ibo")) # 'nformatics'
+print(str1.lstrip("ibo")) # 'nformatics' it only takes in acount the letters
 # Note: all combinations of characters in argument are removed
 # from left of string until first mismatch!
 print(str1.index("i"))    # 1
