@@ -31,9 +31,9 @@ pers1['jobs'] = ['SCIENTIST','LECTURER']
 print("Pers1 = {}".format(pers1))
 ################################################################################
 # Keys and values
-Ks = list(pers1.keys())
+Ks = list(pers1.keys())#save all of the keys in a list
 print("Keys of pers1: {}".format(Ks))
-Vs = list(pers1.values())
+Vs = list(pers1.values())#save all of the values in a list
 print("Values of pers1: {}\n{}".format(Vs,type(Vs)))
 print("Value {} has {}".format(Vs[1],type(Vs[1])))
 print("Value {} has {}".format(Vs[2],type(Vs[2])))
