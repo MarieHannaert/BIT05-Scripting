@@ -39,3 +39,5 @@ print("\npeptides = {}\nresult = {}".format(peptides,peplen))
 # Using dict comprehension to reverse key:value pair in a dictionary
 revdict = {v:k for k,v in peplen.items()}
 print("\nrevdict = {}".format(revdict))
+
+#the key was updated to 6 en becaus it will go over and the last is also 6 en is then updated. 
