@@ -2,11 +2,8 @@
 import csv
 from eutils import Client
 eclient = Client(api_key="4bf09a23633aa3087af235a146b6c336a108")
-esearchlist = []
-efetchlist = []
-genes = []
-organisms = []
-# Reading csv file line by line
+esearchlist=[]
+efetchlist=[]
 with open('gene_species.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=';')
     line_count = 0
@@ -25,16 +22,12 @@ with open('gene_species.csv') as csv_file:
             obj_summary_list = dir(gene_esearch)
             esearchlist.append(gene_esearch.ids[0])
             line_count += 1
-    for ids in esearchlist:
-        protein_efetch = eclient.efetch(db='Protein', id=ids)
+    for protein_id in esearchlist:
+        protein_efetch=eclient.efetch(db='Protein', id=protein_id)
         obj_protein_list = dir(protein_efetch)
         refseq = protein_efetch.gbseqs[0]
+        print(refseq)
         refseq_list = dir(refseq)
         efetchlist.append(refseq.sequence)
         print(efetchlist)
         print(refseq_list)
-    print("Processed {} lines.".format(line_count))
-csv_file.close()
-#################
-
-
